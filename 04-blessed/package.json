@@ -1,0 +1,13 @@
+{
+  "name": "04-blessed",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "Dustan Kasten <dustan.kasten@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "react": "0.14",
+    "react-blessed": "^0.1.7"
+  }
+}
