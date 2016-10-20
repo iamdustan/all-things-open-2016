@@ -1,0 +1,11 @@
+{
+  "name": "06-x11",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dustan Kasten <dustan.kasten@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "0.14",
+    "react-x11": "^0.0.1"
+  }
+}
