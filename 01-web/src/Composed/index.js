@@ -3,7 +3,7 @@ import '../containers.css';
 
 class Counter extends Component {
   static defaultProps = {component: 'p'};
-  state = {count: 0};
+  state = {count: this.props.initialValue || 0};
 
   increment = (event) => {
     event.preventDefault();
@@ -27,10 +27,10 @@ class App extends Component {
     return (
       <div className={'Container'} onClick={this.increment}>
         <h2 className={'Header'}>React.js Counter</h2>
-        <p>
+        <div>
           <Counter />
-          <Counter />
-        </p>
+          <Counter initialValue={5} />
+        </div>
       </div>
     );
   }

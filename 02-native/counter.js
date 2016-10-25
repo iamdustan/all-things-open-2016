@@ -8,42 +8,26 @@ import {
   TouchableHighlight,
   View
 } from 'react-native';
+import GenericCounter from './GenericCounter';
 
-type Props = {
-  initialCount: number
-};
+type Props = {initialValue?: number};
 
-type DefaultProps = {
-  initialCount: number
-};
-
-type State = {
-  count: number
-};
-
-export default class Counter extends Component {
-  props:Props;
-  state:State = {count: this.props.initialCount};
-  static defaultProps = {
-    initialCount: 0
-  };
-
-  _onPress = (event) => {
-    this.setState(state => ({count: state.count +1}));
-  };
-
-  render() {
-    return (
-      <TouchableHighlight onPress={this._onPress} underlayColor={'transparent'}>
-        <View style={styles.container}>
-          <Text>
-            Counter:
-          </Text>
-          <Text>{this.state.count}</Text>
-        </View>
-      </TouchableHighlight>
-    );
-  }
+export default function Counter (baseProps:Props) {
+  return (
+    <GenericCounter
+      {...baseProps}
+      render={(props, state) => (
+        <TouchableHighlight onPress={props.onClick} underlayColor={'transparent'}>
+          <View style={styles.container}>
+            <Text>
+              Counter:
+            </Text>
+            <Text>{state.count}</Text>
+          </View>
+        </TouchableHighlight>
+      )}
+    />
+  );
 }
 
 const styles = StyleSheet.create({

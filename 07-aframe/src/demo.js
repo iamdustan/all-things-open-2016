@@ -8,6 +8,7 @@ import {Entity, Scene} from 'aframe-react';
 import Camera from './components/Camera';
 import Text from './components/Text';
 import Sky from './components/Sky';
+import Counter from './Counter';
 
 export default class VRScene extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export default class VRScene extends Component {
   }
 
   changeColor() {
+    console.log('changeColor');
     const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
     this.setState({
       color: colors[Math.floor(Math.random() * colors.length)]
@@ -28,9 +30,11 @@ export default class VRScene extends Component {
         <Camera>
           <a-cursor
             animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
->
-          </a-cursor>
+          />
         </Camera>
+
+        <Counter position='-5 1 -3' rotation="0 -45 0"  />
+        <Counter position='5 1 -3' rotation="0 -45 0" initialValue={5} />
 
         <Sky src="url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)"/>
 

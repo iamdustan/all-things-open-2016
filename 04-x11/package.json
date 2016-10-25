@@ -4,7 +4,12 @@
   "main": "index.js",
   "author": "Dustan Kasten <dustan.kasten@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=development babel-node ./"
+  },
   "dependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-react-app": "^1.0.0",
     "react": "0.14",
     "react-x11": "^0.0.1"
   }

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter, Match, Link, Miss} from 'react-router';
 import Counter from './Counter';
 import Composed from './Composed';
+import Generic from './Generic';
 import './index.css';
 
 const NoMatch = ({location}) => (
@@ -19,6 +20,7 @@ const App = () => (
         <li><Link to="/">Home</Link></li>
         <li><Link to="/counter">Basic Counter</Link></li>
         <li><Link to="/composed">Composed Counter</Link></li>
+        <li><Link to="/generic">Generic Counter</Link></li>
       </ul>
       <div>
         <Match exactly pattern="/" component={() => (
@@ -26,6 +28,7 @@ const App = () => (
         )} />
         <Match pattern="/counter" component={Counter} />
         <Match pattern="/composed" component={Composed} />
+        <Match pattern="/generic" component={Generic} />
         <Miss component={NoMatch}/>
       </div>
     </div>
