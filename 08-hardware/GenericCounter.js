@@ -14,6 +14,7 @@ class Counter extends Component {
   };
 
   render () {
+    console.log('render');
     return this.props.render({onClick: this.increment}, this.state);
   }
 }

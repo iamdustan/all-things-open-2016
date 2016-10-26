@@ -5,11 +5,11 @@ const Counter = (rootProps) => (
   <GenericCounter
     {...rootProps}
     render={(props, state) => (
-      <div className={'Container'} onClick={props.onClick}>
+      <div className={'Container'}>
         <h2 className={'Header'}>React.js Counter</h2>
-        <p>
+        <div onClick={props.onClick}>
           Click counter: {state.count}
-        </p>
+        </div>
       </div>
     )}
   />

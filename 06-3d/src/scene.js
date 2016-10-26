@@ -389,5 +389,5 @@ class PhysicsMousePick extends Component {
     );
   }
 }
-console.log('here');
+
 export default PhysicsMousePick;

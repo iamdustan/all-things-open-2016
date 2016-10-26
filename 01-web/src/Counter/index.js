@@ -10,11 +10,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className={'Container'} onClick={this.increment}>
+      <div className={'Container'}>
         <h2 className={'Header'}>React.js Counter</h2>
-        <p>
+        <div onClick={this.increment}>
           Click counter: {this.state.count}
-        </p>
+        </div>
       </div>
     );
   }

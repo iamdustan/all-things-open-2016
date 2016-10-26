@@ -29,7 +29,7 @@ class App extends Component {
         <h2 className={'Header'}>React.js Counter</h2>
         <div>
           <Counter />
-          <Counter />
+          <Counter initialValue={5} />
         </div>
       </div>
     );

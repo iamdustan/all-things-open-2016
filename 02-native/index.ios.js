@@ -18,10 +18,10 @@ export default class NativeCounter extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+          React Native Counter!
         </Text>
         <Counter style={styles.instructions} />
-        <Counter style={styles.instructions} initialCount={10} />
+        <Counter style={styles.instructions} initialValue={5} />
       </View>
     );
   }
@@ -35,11 +35,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 36,
     textAlign: 'center',
     margin: 10,
   },
   instructions: {
+    fontSize: 24,
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,

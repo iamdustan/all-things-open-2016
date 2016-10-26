@@ -17,7 +17,6 @@ export default class VRScene extends Component {
   }
 
   changeColor() {
-    console.log('changeColor');
     const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
     this.setState({
       color: colors[Math.floor(Math.random() * colors.length)]
@@ -33,7 +32,7 @@ export default class VRScene extends Component {
           />
         </Camera>
 
-        <Counter position='-5 1 -3' rotation="0 -45 0"  />
+        <Counter position='-15 1 -3' rotation="0 45 0"  />
         <Counter position='5 1 -3' rotation="0 -45 0" initialValue={5} />
 
         <Sky src="url(https://rawgit.com/aframevr/assets/gh-pages/360-image-gallery-boilerplate/img/sechelt.jpg)"/>

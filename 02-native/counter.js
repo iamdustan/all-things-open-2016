@@ -19,10 +19,10 @@ export default function Counter (baseProps:Props) {
       render={(props, state) => (
         <TouchableHighlight onPress={props.onClick} underlayColor={'transparent'}>
           <View style={styles.container}>
-            <Text>
+            <Text style={baseProps.style}>
               Counter:
             </Text>
-            <Text>{state.count}</Text>
+            <Text style={baseProps.style}>{state.count}</Text>
           </View>
         </TouchableHighlight>
       )}
